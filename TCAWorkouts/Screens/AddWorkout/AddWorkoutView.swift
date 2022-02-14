@@ -5,9 +5,16 @@ struct AddWorkoutView: View {
     let store: Store<Workout?, AddWorkoutAction>
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
+    @State var name = ""
+    
     var body: some View {
         WithViewStore(store) { viewStore in
             VStack {
+//                TextField("workout title",
+//                          text: viewStore.binding(get: \.title, send: .workoutTitleChanged))
+//                    .padding()
+//                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
                 Button("change") {
                     viewStore.send(.changeNameOfWorkout)
                 }

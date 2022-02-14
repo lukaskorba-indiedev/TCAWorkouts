@@ -10,9 +10,18 @@ struct WorkoutsState: Equatable {
     var workoutToAdd: Workout? = nil
     var storageFilter = Storage.all
     
+    // helper functions
     mutating func sortWorkouts() {
         workouts.sort { lhs, rhs in
             lhs.timestemp > rhs.timestemp
+        }
+    }
+    
+    var filteredWorkouts: IdentifiedArrayOf<Workout> {
+        switch storageFilter {
+        case .all: return workouts
+        case .onDevice: return workouts.filter { $0.isStoredOnThisDevice }
+        case .remote: return workouts.filter { !$0.isStoredOnThisDevice }
         }
     }
 }

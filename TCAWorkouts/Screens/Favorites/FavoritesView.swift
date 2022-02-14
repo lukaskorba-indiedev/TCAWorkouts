@@ -15,14 +15,12 @@ struct FavoritesView: View {
                         List {
                             ForEachStore(
                                 store.scope(
-                                    state: { $0.workouts },
+                                    state: { $0.favoriteWorkouts },
                                     action: FavoritesAction.workout(id:action:)
                                 ),
                                 content: { workoutStore in
                                     WithViewStore(workoutStore) { workoutViewStore in
-                                        if viewStore.favorites.contains(workoutViewStore.id) {
-                                            WorkoutItemView(store: workoutStore)
-                                        }
+                                        WorkoutItemView(store: workoutStore)
                                     }
                                 })
                         }

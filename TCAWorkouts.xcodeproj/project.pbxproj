@@ -11,6 +11,7 @@
 		9E34E18427B2FA670000CF2B /* UserDefaultsFavoritesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34E18327B2FA670000CF2B /* UserDefaultsFavoritesProvider.swift */; };
 		9E34E18627B3D0970000CF2B /* CoreDataWorkoutsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34E18527B3D0970000CF2B /* CoreDataWorkoutsProvider.swift */; };
 		9E34E18827B3D0A70000CF2B /* FirebaseWorkoutsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34E18727B3D0A70000CF2B /* FirebaseWorkoutsProvider.swift */; };
+		9EC28E7127B433B900149D48 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9EC28E7027B433B900149D48 /* README.md */; };
 		9ED9F07227B0198E00D09E39 /* TCAWorkoutsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9F07127B0198E00D09E39 /* TCAWorkoutsApp.swift */; };
 		9ED9F07627B0198E00D09E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ED9F07527B0198E00D09E39 /* Assets.xcassets */; };
 		9ED9F07927B0198E00D09E39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ED9F07827B0198E00D09E39 /* Preview Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		9E34E18327B2FA670000CF2B /* UserDefaultsFavoritesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsFavoritesProvider.swift; sourceTree = "<group>"; };
 		9E34E18527B3D0970000CF2B /* CoreDataWorkoutsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataWorkoutsProvider.swift; sourceTree = "<group>"; };
 		9E34E18727B3D0A70000CF2B /* FirebaseWorkoutsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWorkoutsProvider.swift; sourceTree = "<group>"; };
+		9EC28E7027B433B900149D48 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9ED9F06E27B0198E00D09E39 /* TCAWorkouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCAWorkouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED9F07127B0198E00D09E39 /* TCAWorkoutsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAWorkoutsApp.swift; sourceTree = "<group>"; };
 		9ED9F07527B0198E00D09E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		9ED9F06527B0198E00D09E39 = {
 			isa = PBXGroup;
 			children = (
+				9EC28E7027B433B900149D48 /* README.md */,
 				9ED9F07027B0198E00D09E39 /* TCAWorkouts */,
 				9ED9F08127B0198F00D09E39 /* TCAWorkoutsTests */,
 				9ED9F08B27B0198F00D09E39 /* TCAWorkoutsUITests */,
@@ -150,7 +153,7 @@
 			children = (
 				9ED9F0BC27B02C5C00D09E39 /* Helpers */,
 				9ED9F0B227B0236C00D09E39 /* Services */,
-				9ED9F0A927B01AD700D09E39 /* Features */,
+				9ED9F0A927B01AD700D09E39 /* Components */,
 				9ED9F09E27B019E500D09E39 /* Screens */,
 				9ED9F07127B0198E00D09E39 /* TCAWorkoutsApp.swift */,
 				9ED9F07527B0198E00D09E39 /* Assets.xcassets */,
@@ -213,12 +216,12 @@
 			path = Favorites;
 			sourceTree = "<group>";
 		};
-		9ED9F0A927B01AD700D09E39 /* Features */ = {
+		9ED9F0A927B01AD700D09E39 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				9ED9F0AA27B01ADF00D09E39 /* WorkoutItem */,
 			);
-			path = Features;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		9ED9F0AA27B01ADF00D09E39 /* WorkoutItem */ = {
@@ -375,6 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EC28E7127B433B900149D48 /* README.md in Resources */,
 				9ED9F07927B0198E00D09E39 /* Preview Assets.xcassets in Resources */,
 				9ED9F07627B0198E00D09E39 /* Assets.xcassets in Resources */,
 			);

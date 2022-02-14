@@ -28,16 +28,12 @@ struct WorkoutsView: View {
                     List {
                         ForEachStore(
                             store.scope(
-                                state: { $0.workouts },
+                                state: { $0.filteredWorkouts },
                                 action: WorkoutsAction.workout(id:action:)
                             ),
                             content: { workoutStore in
                                 WithViewStore(workoutStore) { workoutViewStore in
-                                    if viewStore.storageFilter == .all ||
-                                        (viewStore.storageFilter == .onDevice && workoutViewStore.isStoredOnThisDevice) ||
-                                        (viewStore.storageFilter == .remote && !workoutViewStore.isStoredOnThisDevice) {
-                                        WorkoutItemView(store: workoutStore)
-                                    }
+                                    WorkoutItemView(store: workoutStore)
                                 }
                             })
                             .onDelete { viewStore.send(.onDeleteTriggered($0)) }

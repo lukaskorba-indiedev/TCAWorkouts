@@ -5,6 +5,10 @@ struct FavoritesState: Equatable {
     // app state
     var workouts = IdentifiedArrayOf<Workout>()
     var favorites = Set<UUID>()
+    
+    var favoriteWorkouts: IdentifiedArrayOf<Workout> {
+        return workouts.filter { favorites.contains($0.id) }
+    }
 }
 
 enum FavoritesAction: Equatable {
